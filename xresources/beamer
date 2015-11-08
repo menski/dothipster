@@ -1,0 +1,3 @@
+#include "light"
+
+URxvt*font: xft:Fantasque Sans Mono:pixelsize=20
