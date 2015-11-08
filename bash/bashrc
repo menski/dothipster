@@ -1,0 +1,16 @@
+# if not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# disable scroll lock
+stty -ixon -ixoff
+
+# load settings
+BASH_D=~/.bash.d
+for file in ${BASH_D}/*.bash; do
+    source $file
+done
+
+# local settings
+if [ -r ~/.bashrc.local ]; then
+    source ~/.bashrc.local
+fi
