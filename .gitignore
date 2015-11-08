@@ -1,0 +1,5 @@
+nvim/plugged/
+nvim/swap/
+nvim/backup/
+nvim/undo/
+nvim/.netrwhist
