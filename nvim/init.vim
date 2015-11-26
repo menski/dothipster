@@ -6,7 +6,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
-Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdcommenter'
@@ -86,12 +87,8 @@ set undodir=~/.config/nvim/undo
 
 "" plugin config
 
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+" airline
+let g:airline_powerline_fonts = 1
 
 " better whitespace
 let g:strip_whitespace_on_save = 1
