@@ -25,3 +25,6 @@ alias ln='ln -iv'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
+
+# configuration files
+alias vimconfig='vim ~/.config/nvim/init.vim'

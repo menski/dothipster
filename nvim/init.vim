@@ -15,6 +15,9 @@ Plug 'scrooloose/syntastic'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
+Plug 'SirVer/ultisnips'
+Plug 'rking/ag.vim'
 
 call plug#end()
 
@@ -63,8 +66,12 @@ set hidden
 " suffixes that get lower priority when doing tab completion for filenames
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
 
-" enable spell check
+" enable spell check and textwidth
 autocmd FileType text,markdown,gitcommit setlocal spell
+autocmd FileType text,markdown,gitcommit setlocal textwidth=79
+
+" use 2 spaces in markdown
+autocmd FileType markdown call Indention(2)
 
 " backup, swap and undo
 if !isdirectory($HOME.'/.config/nvim/swap')
@@ -99,3 +106,12 @@ let g:syntastic_mode_map = {
         \ "mode": "active",
         \ "active_filetypes": [],
         \ "passive_filetypes": ["java"] }
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<C-k>"
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+
+" nerdtree
+noremap <F9> :NERDTreeToggle<CR>
