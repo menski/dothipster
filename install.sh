@@ -32,6 +32,7 @@ install bash/bashrc ~/.bashrc
 install bash/bash.d ~/.bash.d
 
 ## install neovim
+mkdir -p ~/.config
 install nvim ~/.config/nvim
 
 ## install tmux
