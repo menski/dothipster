@@ -117,3 +117,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 " nerdtree
 noremap <F9> :NERDTreeToggle<CR>
+
+" you complete me
+let g:ycm_rust_src_path = '/usr/src/rust/src'
+nnoremap <Leader>] :YcmCompleter GoTo<CR>
