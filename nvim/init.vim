@@ -19,6 +19,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 Plug 'rking/ag.vim'
+Plug 'chrisbra/csv.vim'
 
 call plug#end()
 
@@ -67,12 +68,16 @@ set hidden
 " suffixes that get lower priority when doing tab completion for filenames
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
 
-" enable spell check and textwidth
+" enable spell check, textwidth and format paragraph shortcut
 autocmd FileType text,markdown,gitcommit setlocal spell
 autocmd FileType text,markdown,gitcommit setlocal textwidth=79
+autocmd FileType text,markdown,gitcommit noremap <F2> gwap
 
 " use 2 spaces in markdown
 autocmd FileType markdown call Indention(2)
+
+" *.dsl files are groovy
+autocmd BufRead,BufNewFile *.dsl set filetype=groovy
 
 " backup, swap and undo
 if !isdirectory($HOME.'/.config/nvim/swap')
