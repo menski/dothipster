@@ -10,8 +10,12 @@ snippet rel "Relative Reference" i
 {{< relref "${1:ref}" >}}
 endsnippet
 
-snippet c " Code" b
+snippet c "Code" b
 \`\`\`${1:java}
 ${2}
 \`\`\`
+endsnippet
+
+snippet i "Image" b
+{{< img src="../img/${1}" title="${2}" class="no-lightbox" >}}
 endsnippet
