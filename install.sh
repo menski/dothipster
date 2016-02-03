@@ -37,6 +37,3 @@ install nvim ~/.config/nvim
 
 ## install tmux
 install tmux/tmux.conf ~/.tmux.conf
-
-## install xresources
-install xresources/light ~/.Xresources
