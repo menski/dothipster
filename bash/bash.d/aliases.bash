@@ -15,7 +15,13 @@ alias lz='ll -rSh'  # sort by size
 alias lt='ll -rth'  # sort by date
 alias pa=pacaur
 alias psgrep='ps aux | grep -v grep | grep -i'
-alias o='xdg-open'
+alias o=xdg-open
+alias g=git
+alias d=docker
+alias dc=docker-compose
+alias mnt='udevil mount'
+alias umnt='udevil umount'
+alias dusc='du -sch .[!.]* * |sort -h'
 
 # safety features
 alias cp='cp -iv'
