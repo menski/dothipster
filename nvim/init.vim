@@ -21,6 +21,7 @@ Plug 'SirVer/ultisnips'
 Plug 'rking/ag.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'KabbAmine/zeavim.vim'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 
@@ -75,7 +76,7 @@ autocmd FileType text,markdown,gitcommit setlocal textwidth=79
 autocmd FileType text,markdown,gitcommit noremap <F2> gwap
 
 " use 2 spaces in markdown
-autocmd FileType markdown call Indention(2)
+autocmd FileType markdown,html call Indention(2)
 
 " *.dsl files are groovy
 autocmd BufRead,BufNewFile *.dsl set filetype=groovy
